@@ -4,7 +4,7 @@ import React, { useState } from "react";
 function App() {
   return (
     <div className="container">
-      <h1>function style component VS class sytle component</h1>
+      <h1>function style component VS class sytle component 1</h1>
       <FuntionComponent initNumber={2} />
       <ClassComponent initNumber={2} />
     </div>
@@ -40,13 +40,18 @@ function FuntionComponent(props) {
 
 class ClassComponent extends React.Component {
   // number값이 변경될 때마다 render가 다시 실행 됨
-  constructor(props) {
-    super(props);
-    this.state = {
-      number: this.props.initNumber,
-      date: new Date().toString(),
-    };
-  }
+  state = {
+    number: this.prop.initNumber,
+    date: new Date().toString(),
+  };
+
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     number: this.props.initNumber,
+  //     date: new Date().toString(),
+  //   };
+  // }
 
   render() {
     return (
